@@ -1,0 +1,31 @@
+{
+  "name": "craftcms/craft",
+  "description": "nystudio107 Craft 3 CMS scaffolding project",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "project"
+  ],
+  "license": "0BSD",
+  "homepage": "https://craftcms.com/",
+  "type": "project",
+  "support": {
+    "email": "support@craftcms.com",
+    "issues": "https://github.com/craftcms/cms/issues",
+    "forum": "https://craftcms.stackexchange.com/",
+    "source": "https://github.com/craftcms/cms",
+    "docs": "https://craftcms.com/docs",
+    "rss": "https://craftcms.com/changelog.rss"
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "@php -r \"copy('./cms/example.env', './cms/.env');\"",
+      "@php -r \"copy('./scripts/example.env.sh', './scripts/.env.sh');\"",
+      "@php -r \"@unlink('composer.json');\"",
+      "@php -r \"@unlink('composer.lock');\"",
+      "@php -r \"@unlink('LICENSE.md');\"",
+      "@php -r \"@unlink('README.md');\""
+    ]
+  }
+}

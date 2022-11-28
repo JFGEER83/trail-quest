@@ -1,0 +1,6 @@
+fs: site
+handle: site
+hasUrls: true
+name: Site
+sortOrder: 1
+url: '@assetsUrl/assets/site'
